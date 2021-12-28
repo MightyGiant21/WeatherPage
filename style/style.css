@@ -11,6 +11,8 @@
 
 #content {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100vw;
     height: calc(100vh - (var(--headerHeight) + var(--footerHeight)));
     background-color: rgba(0, 0, 0, .25);
@@ -82,4 +84,55 @@ footer {
 #currentTemp, #maxTemp, #minTemp {
     margin-top: 1rem;
     margin-left: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    height: 2rem;
+    width: 5rem;
+    border-radius: 5px;
+    background-color: #ff6868;
+    border-color: #ff6868;
+    margin-top: 1rem;
+    border: none;
+    font-family: 'Spartan';
+}
+
+#locationData {
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Spartan';
+    font-size: 26px;
+    outline: none;
+    padding: 5px;
+}
+
+label {
+    font-family: 'Spartan';
+}
+
+@-webkit-keyframes shake {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); } 
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+#locationData.shake {
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 0.5s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: 1;
 }
